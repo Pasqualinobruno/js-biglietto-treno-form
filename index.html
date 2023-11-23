@@ -17,19 +17,60 @@
         </script>
 
     </head>
-    <body class="bg-danger">
-        <div class="container">
-            <label for="fname"></label>
-            <input type="text" id="name" value="fname">
-
-            <label for="Km da percorrere"></label>
-            <input type="text" id="km" value="Km da percorrere">
-
-            <label for="La tua età"></label>
-            <input type="text" id="eta" value="La tua età">
-
-            <button id="generade">Genera</button>
-            <button>Annulla</button>
+    <body class="bg-pink">
+        <h1 class="text-uppercase text-center text-white">calcola il prezzo del tuo biglietto</h1>
+        <div class="container bg-white text-center p-3 rounded-1">
+            <div class="row">
+                <div class="col-4">
+                    <h3 class="text-pink">Nome Cognome</h3>
+                    <label for="fname"></label>
+                    <input type="text" id="name" placeholder="Full name" value="">
+                </div>
+                <div class="col-4">
+                    <h3 class="text-pink">Km da percorrere</h3>
+                    <label for="Km da percorrere"></label>
+                    <input type="text" id="km" placeholder="Km" value="">
+                </div>
+                <div class="col-4 text-pink">
+                    <h3>Fascià d'età</h3>
+                    <label for="La tua età"></label>
+                    <input type="text" id="eta" placeholder="La tua età" value="">
+                </div>
+                <div class="p-4">
+                    <button id="generade" class=" text-pink">Genera</button>
+                    <button id="nothing" class="text-pink">Annulla</button>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-uppercase text-white text-center m-1 p-1">Il tuo biglietto</h1>
+        <div class="container bg-white pt-3 pb-3">
+            <h3 class="text-dark text-uppercase pt-3">dettagli passeggeri</h3>
+            
+            <div class="row">
+                <hr class=>
+                <div class="col bg-success pt-3 pb-3 ps-4">
+                    <div class="text-uppercase"><strong>Nome passeggero</strong></div>
+                    <div ><strong id="name-passeggero">Nome passeggero</strong></div>
+                </div>
+                <div class="col p-4">
+                    <div><strong>Offerta</strong></div>
+                    <div id="ticket" class="mt-3">Biglietto standard</div>
+                </div>
+                <div class="col p-4">
+                    <div><strong>Carozza</strong></div>
+                    <div class="mt-3">5</div>
+                </div>
+                <div class="col p-4 ">
+                    <div><strong>Codice CP</strong></div>
+                    <div class="mt-3">92911</div>
+                </div>
+                <div class="col p-4">
+                    <div><strong>Costo biglietto</strong></div>
+                    <div id="price" class="mt-3"></div>
+                </div>
+                <hr class="border-2">
+            </div>
+            
         </div>
 
         <script src="./js/main.js"></script>
