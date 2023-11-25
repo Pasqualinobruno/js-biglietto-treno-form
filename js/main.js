@@ -60,19 +60,28 @@ document.querySelector('#generade').addEventListener('click', function () {
 document.querySelector('#generade').addEventListener('click', function () {
     const km = document.querySelector('#km').value * 0.21;
     const eta = document.querySelector('#eta').value;
+    const carriage = Math.floor(Math.random() * 10);
+    const cp = Math.floor(Math.random() * 100001);
+
     if (eta < 18) {
         const price_minor = (km - (km * 20 / 100));
         document.querySelector("#price").innerHTML = price_minor + '€';
         document.querySelector('#ticket').innerHTML = 'Biglietto aggevolato';
+        document.querySelector('#carriage').innerHTML = carriage;
+        document.querySelector('#cp').innerHTML = cp;
 
     } else if (eta > 65) {
         const price_over = (km - (km * 40 / 100));
         document.querySelector("#price").innerHTML = price_over + '€';
         document.querySelector('#ticket').innerHTML = 'Biglietto aggevolato';
+        document.querySelector('#carriage').innerHTML = carriage;
+        document.querySelector('#cp').innerHTML = cp;
 
     } else {
         document.querySelector("#price").innerHTML = km + '€';
         document.querySelector('#ticket').innerHTML = 'Biglietto standard';
+        document.querySelector('#carriage').innerHTML = carriage;
+        document.querySelector('#cp').innerHTML = cp;
     }
 
 })
